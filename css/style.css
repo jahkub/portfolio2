@@ -1,10 +1,17 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: "eckmannpsych-medium", sans-serif;
+    font-family: "Agbalumo", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: rgb(58, 58, 58);
+    color: rgb(0, 0, 0);
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: rgba(0, 0, 0, 0.250);
+    transition: 10s;
 }
 body {
     overflow-y: hidden;
@@ -12,9 +19,14 @@ body {
 }
 #wrapper {
     height: 100vh;
-    border: solid rgb(58, 58, 58) 5px;
+    /*border: solid rgb(58, 58, 58) 5px; */
+    border: solid rgb(0, 0, 0) 5px;
     display: flex;
     flex-direction: column;
+}
+header {
+    display: flex;
+    justify-content: space-between;
 }
 #intro {
     display: flex;
@@ -22,12 +34,23 @@ body {
     align-items: center;
     height: 20vh;
 }
+#contact {
+    height: 20vh;
+    list-style-type:none;
+    margin-right: 10px;
+}
+#contactlist {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 #logo {
-    height: 100px;
+    height: 150px;
     width: auto;
 }
 .rotate-logo {
-    animation: rotate 5s linear infinite;
+    animation: rotate 10s linear infinite;
 }
 @keyframes rotate {
     from {
@@ -37,21 +60,66 @@ body {
         transform: rotate(360deg);
     }
 }
+#title {
+    font-size: 4rem;
+}
 main {
     height: 80vh;
     width: 100vw;
     overflow-y: hidden;
     overflow-x: auto;
-    white-space: nowrap; 
-
+    white-space: nowrap;
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
 }
+
+.scrollable-container {
+    height: 95%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
 .thingcontainer {
     height: 95%;
-    width: 200px;
+    width: 750px;
     margin: 5px;
+    border: solid rgb(0, 0, 0) 5px;
+    flex-shrink: 0; /* Prevents squishing */
 
-    border: solid rgb(58, 58, 58) 5px;
+    display: flex;
 }
+.infocontainer {
+    height: 100%;
+    width: 33%;
+    margin: 10px;
+}
+.showcase {
+    height: 100%;
+    width: auto;
+}
+
+/*gör en description för mobil och för dator, separata, kortare för lur så det är mindre plats*/
+
+@media screen and (max-width: 600px) {
+    .scrollable-container {
+        flex-direction: column;
+    }
+    body {
+        overflow-y:auto;
+        overflow-x: hidden;
+    }
+    .thingcontainer {
+        width: 94%;
+        flex-direction: column;
+    }
+    .infocontainer {
+        width: 33%;
+        margin: 10px;
+    }
+    .showcase {
+        height: 100%;
+        width: auto;
+    }
+  }
