@@ -1,0 +1,184 @@
+body, html {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: "ibm-plex-mono", Helvetica, Arial, sans-serif, sans-serif;
+}
+a {
+    color: black;
+}
+body {
+    border: 1px black solid;
+}
+/*homies*/
+header {
+    width: 100%;
+    height: 100px;
+
+    position: fixed;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px black solid;
+    background-color: white;
+}
+.aligntitle {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border: 1px black solid;
+}
+#title {
+    font-family: 'eckmannpsych-small', sans-serif;
+    font-size: 2rem;
+    position: absolute;
+    top: 4px;
+}
+#marquee {
+    border: 1px black solid;
+    height: 50px;
+}
+#marquee h2 {
+    font-style: normal;
+}
+main {
+    min-height: 100%;
+}
+.space {
+    height: 99px;
+    width: 100%;
+}
+#mainwrapper {
+    border: 1px black solid;
+    height: calc(100vh - 102px);
+    overflow: hidden;
+}
+#soytext {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#graphic {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.logo {
+    height: auto;
+    width: 70%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+}
+.logo.active {
+    opacity: 1;
+}
+.skills {
+    display: none;
+}
+.extra {
+    display: inline;
+    padding: 80px;
+}
+
+#second-title-align {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border: 1px black solid;
+}
+#title2 {
+    font-family: 'eckmannpsych-small', sans-serif;
+    font-size: 2rem;
+    position: relative;
+}
+
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .card {
+    border: 2px solid #000000;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 60vw;
+  }
+  
+  .card h3 {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+
+@media (min-width: 650px) {
+    #title {
+        font-size: 2rem;
+    }
+    #mainwrapper {
+        display: flex;
+    }
+    #soytext {
+        height: 100%;
+        width: 50%;
+
+        padding: 80px;
+    }
+    #graphic {
+        height: 100%;
+        width: 50%;
+    }
+    .logo {
+        height: 70%;
+        width: auto;
+        max-width: 100%;
+    }
+    .skills {
+        display: inline;
+    }
+    .extra {
+        display: none;
+    }
+    .portfolio {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .card img {
+        height: 30vw; 
+      }
+  }
+      
+  @media (min-width: 650px) and (max-width: 1500px) {
+    .logo {
+        height:auto;
+        width:40vw;
+        max-width: fit-content;
+    }
+} 
