@@ -62,7 +62,7 @@ main {
 #mainwrapper {
     border: 1px black solid;
     height: calc(100vh - 102px);
-    overflow: hidden;
+    overflow-y: hidden;
 }
 #soytext {
     padding: 20px;
@@ -75,7 +75,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -92,6 +91,10 @@ main {
 }
 .skills {
     display: none;
+}
+.tinylogo {
+    height: 30%;
+    width: 30%;
 }
 .extra {
     display: inline;
@@ -138,6 +141,30 @@ main {
     margin: 10px 0;
   }
 
+  .card:hover {
+    background-color: #c3c3c3;
+    transition: 0.2s ease;
+  }
+
+.overlay {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+
+    height: 100vh;
+    width: 100%;
+    background-color: #0000007f;
+
+    display: flex;
+    display: none;
+    justify-content: center;
+}
+.slideshowpic {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
 @media (min-width: 650px) {
     #title {
@@ -173,6 +200,10 @@ main {
       .card img {
         height: 30vw; 
       }
+      .slideshowpic {
+        max-width: 80vw;
+        max-height: 80%;
+    }
   }
       
   @media (min-width: 650px) and (max-width: 1500px) {
@@ -182,3 +213,4 @@ main {
         max-width: fit-content;
     }
 } 
+
