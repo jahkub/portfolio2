@@ -73,3 +73,19 @@ document.addEventListener( 'DOMContentLoaded', function () {
   main.mount();
   thumbnails.mount();
 } );
+
+var overlay = document.getElementsByClassName("overlay")
+
+var open1 = document.getElementsByClassName("open1")
+
+open1.addEventListener("click", clickopen)
+overlay.addEventListener("click", clickclose)
+
+function clickopen() {
+overlay.classList.add("open")
+
+}
+
+function clickclose() {
+  overlay.classList.remove("open")
+  }
