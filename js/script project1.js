@@ -23,7 +23,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
         rewind    : true,
         pagination: false,
         arrows    : false,
-      heightRatio: 0.6,
+      heightRatio: 0.7,
     } );
 
 
