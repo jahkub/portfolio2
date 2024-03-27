@@ -11,7 +11,7 @@ function switchImage() {
         setTimeout(() => {
             currentImageIndex = (currentImageIndex + 1) % images.length;
             switchImage();
-        }, 5000); // Display eye image for 10 seconds
+        }, 8000); // tid
     } else {
         setTimeout(() => {
             currentImageIndex = (currentImageIndex + 1) % images.length;
