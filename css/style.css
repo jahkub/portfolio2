@@ -7,7 +7,8 @@ body, html {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    font-family: "ibm-plex-mono", Helvetica, Arial, sans-serif, sans-serif;
+    font-family: "neue-haas-grotesk-text", Helvetica, Arial, sans-serif, sans-serif;
+    font-weight: 400;
 }
 a {
     color: black;
@@ -56,9 +57,11 @@ header {
 #marquee {
     border: 1px black solid;
     height: 50px;
+    display: flex;
+    align-items: center;
 }
 #marquee h2 {
-    font-style: normal;
+    font-weight: 400;
 }
 main {
     min-height: 100%;
@@ -159,6 +162,20 @@ main {
     background-color: #c3c3c3;
     transition: 0.2s ease;
 }
+
+    .cardtext {
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        height: 60vw;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .cardtext h2 {
+        text-decoration: none;
+    }
 
 footer {
     padding: 3vw;
@@ -272,6 +289,9 @@ footer {
     }
     .card img {
         height: 30vw; 
+    }
+    .cardtext {
+        height: 30vw;
     }
 
     .slideshowwrapper {
